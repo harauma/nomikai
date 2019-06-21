@@ -1,0 +1,33 @@
+<h1>飲み会の座席きめまーーーーす</h1>
+<table class="ui celled table">
+    <tr>
+        <td><p><%= @zaseki1 %></p></td>
+        <td><p><%= @zaseki2 %></p></td>
+        <td><p><%= @zaseki3 %></p></td>
+        <td><p><%= @zaseki4 %></p></td>
+        <td><p><%= @zaseki5 %></p></td>
+        <td><p><%= @zaseki6 %></p></td>
+        <td><p></td>
+    </tr>
+    <tr>
+        <td><p><%= @zaseki7 %></p></td>
+        <td><p><%= @zaseki8 %></p></td>
+        <td><p><%= @zaseki9 %></p></td>
+        <td><p><%= @zaseki10 %></p></td>
+        <td><p><%= @zaseki11 %></p></td>
+        <td><p><%= @zaseki12 %></p></td>
+        <td><p><%= @zaseki13 %></p></td>
+    </tr>
+</table>
+<%= form_for(@name,url: zaseki_new_path) do %>
+    <p>
+    名前:<input type="text" name="name" autofocus>
+    </p>
+    <p>
+        <input type="submit" value="座席を決める！">
+    </p>
+<% end %>
+    <%= button_to("シャッフル","/zaseki/shuffle",method: :get )%>
+    <p>
+        <%= link_to("リセット","/zaseki/delete",method: :delete)%>
+    </p>
