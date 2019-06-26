@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  get '/' => 'zaseki#index'
+  root to: 'zaseki#index'
+
   post 'zaseki/new' => 'zaseki#new'
   get 'zaseki/shuffle' => 'zaseki#shuffle'
   delete 'zaseki/delete' => 'zaseki#delete'
